@@ -7,34 +7,34 @@ import { isNgTemplate } from '@angular/compiler';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-   public students = [
-     {
-       name: "Nate",
-       status: false
-     },
-     {
-      name: "Noah",
-      status: false
-    },{
-      name: "Victor",
-      status: false
+  public students = [
+    {
+      name: "Nate",
+      status: "Signed In"
     },
     {
-      name: "Pablo",
-      status: false
-    },
-    {
-      name: "Julian",
-      status: false
-    }
-   ]
+     name: "Noah",
+     status: "Signed In"
+   },{
+     name: "Victor",
+     status: "Signed In"
+   },
+   {
+     name: "Pablo",
+     status: "Signed In"
+   },
+   {
+     name: "Julian",
+     status: "Signed In"
+   }
+  ]
 
     checkout(){
       for(let item of this.students){
-        if(item.status===false){
-          item.status=true;
+        if(item.status==="Signed In"){
+          item.status="Signed Out";
       }else{
-        item.status=false;
+        item.status="Signed In";
       }
     }
   }

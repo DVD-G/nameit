@@ -1,20 +1,25 @@
 <div *ngFor ="let journal of journals">
-  <h1>{{journal.title}}</h1>
-  <h6>{{journal.now}}</h6>
-  <p>
+  <h1 id="ttle">{{journal.title}}</h1>
+  <p id="cntnt">
     {{journal.content}}
   </p>
  </div>
- <div>
+
+ <div *ngIf="journal"> 
+   <button *ngIf=""(click)="getData()"></button>
+ </div>
+
+
+ <!-- <div id="npt">
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <label>
        Title:
-    <input type="text" placeholder="Enter Title Here" formControlName="title">
+    <input type="text" placeholder="Title here" formControlName="title">
    </label>
    <label>
        Journal:
-    <input type="text"  placeholder="Enter Entry Here"  formControlName="content">
+    <input type="text"  placeholder="Journal entry here"  formControlName="content">
    </label>
-    <button type="submit"> Submit</button>
+    <button type="submit">Submit</button>
    </form>
- </div>
+ </div> -->
