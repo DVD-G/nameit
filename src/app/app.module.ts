@@ -10,6 +10,8 @@ import { ContactsComponent } from './contacts/contacts.component';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { BallComponent } from './ball/ball.component'
 import { HttpClientModule } from '@angular/common/http';
+import { SingleBlogComponent } from './single-blogs/single-blogs.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     BlogsComponent,
     AboutComponent,
     ContactsComponent,
-    BallComponent
+    BallComponent,
+    SingleBlogComponent
   ],
   imports: [
     BrowserModule,

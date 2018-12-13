@@ -1,4 +1,4 @@
-#kids{
+/*#kids{
     width: 200px;
     text-align: center;
     border-style: outset;
@@ -9,4 +9,21 @@
 #bttn{
     background-color: #6A5ACD;
     color: aliceblue;
+}*/
+#err{
+    font-size: 14px;
+    color: red;
+}
+
+#padding{
+    padding: 25px 75px;
+}
+
+.blog-link{
+    cursor: pointer;
+    color: lightcoral;
+}
+
+.blog-link:hover{
+    color: black;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/*import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
@@ -11,8 +11,19 @@ import { HttpClient } from '@angular/common/http';
 export class BlogsComponent implements OnInit {
   public journals;
   public form: FormGroup;
+  public user;
 
   constructor(public fb: FormBuilder, public http: HttpClient) { }
+
+  post() {
+    this.http.post('http://localhost:3000/beef', this.form.value).subscribe((result: any) => {
+      console.log(result);
+      this.journals = result;
+    }),
+      (err) => {
+        console.log(err)
+      };
+  }
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -24,7 +35,7 @@ export class BlogsComponent implements OnInit {
   }
 
   getData() {
-    this.http.get('http://localhost:3000/test').subscribe((data) => {
+    this.http.get('http://localhost:3000/chicken').subscribe((data) => {
       this.journals = data;
 
     }, (err) => {
@@ -39,4 +50,19 @@ export class BlogsComponent implements OnInit {
   // }
 
 
-};
+};*/
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-blogs',
+  templateUrl: './blogs.component.html',
+  styleUrls: ['./blogs.component.css']
+})
+export class BlogsComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

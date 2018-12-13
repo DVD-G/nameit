@@ -1,14 +1,25 @@
-<div *ngFor ="let journal of journals">
+<!--<div *ngFor ="let journal of journals">
   <h1 id="ttle">{{journal.title}}</h1>
   <p id="cntnt">
     {{journal.content}}
   </p>
  </div>
 
- <div *ngIf="journal"> 
-   <button *ngIf=""(click)="getData()"></button>
- </div>
+ 
 
+ <div>
+    <form [formGroup]="form" (ngSubmit)="post()">
+      <label>
+         Title:
+      <input type="text" placeholder="Enter Title Here" formControlName="title">
+     </label>
+     <label>
+        Entry:
+      <input type="text"  placeholder="Enter Entry Here"  formControlName="content">
+     </label>
+      <button type="submit"> Post</button>
+     </form>
+   </div>-->
 
  <!-- <div id="npt">
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -23,3 +34,6 @@
     <button type="submit">Submit</button>
    </form>
  </div> -->
+ <p>
+    blogs works!
+  </p>
